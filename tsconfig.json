@@ -1,0 +1,10 @@
+{
+    "compileOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    },
+    "files": [
+        "src/main.ts",
+        "src/basic_types.ts"
+    ]
+}
