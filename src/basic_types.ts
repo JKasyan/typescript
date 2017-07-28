@@ -26,3 +26,45 @@ let list2:Array<number> = list1
 let tuple1:[string, number] = ['1', 2]
 tuple1[2] = '2'
 tuple1[3] = 3
+
+//enums
+
+enum Color {Red=2, Blue, Green}
+
+let color1 = Color.Red
+let colorName:string = Color[2]
+
+//any
+
+let notSure:any = 2
+notSure = false;
+notSure  = {}
+notSure = function(d:number):void {}
+
+notSure.ifExists()
+
+let listAny:any = [1, 'One', Color.Blue, function() {}]
+
+//void
+
+function debug(a: string):void {
+    console.log(a)
+}
+
+let unusuble:void = null
+unusuble = undefined
+
+//never
+function throwError(a:string):never {
+    throw a;
+}
+
+function foreverCycle():never {
+    while(true) {}
+}
+
+//assertions
+
+let shouldBeDigit:any = 1
+let digit:number = shouldBeDigit as number
+let digit2:number = <number>shouldBeDigit
