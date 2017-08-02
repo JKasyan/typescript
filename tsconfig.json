@@ -7,5 +7,7 @@
         "src/main.ts",
         "src/basic_types.ts",
         "src/declarations.ts"
+        "src/basic_types.ts",
+        "src/interfaces.ts"
     ]
 }
