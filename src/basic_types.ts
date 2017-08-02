@@ -41,7 +41,11 @@ notSure = false;
 notSure  = {}
 notSure = function(d:number):void {}
 
-notSure.ifExists()
+try {
+    notSure.ifExists()
+} catch (err) {
+    console.log(err)
+}
 
 let listAny:any = [1, 'One', Color.Blue, function() {}]
 
@@ -65,6 +69,10 @@ function foreverCycle():never {
 
 //assertions
 
-let shouldBeDigit:any = 1
-let digit:number = shouldBeDigit as number
-let digit2:number = <number>shouldBeDigit
+let shouldBeDigit:any = 'Hello world'
+try {
+    let digit:number = shouldBeDigit as number
+    let digit2:number = <number>shouldBeDigit
+} catch(err) {
+    console.log(err)
+}

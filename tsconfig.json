@@ -5,6 +5,7 @@
     },
     "files": [
         "src/main.ts",
-        "src/basic_types.ts"
+        "src/basic_types.ts",
+        "src/interfaces.ts"
     ]
 }
