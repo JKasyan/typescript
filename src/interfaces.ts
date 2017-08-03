@@ -70,4 +70,50 @@ interface Objectable {
 
 let obj1:Objectable = {a: 1, b: ["1", "2"], 1: 1}
 
+//
+interface ClockConstructor {
+    new (hour: number, minute: number)
+}
 
+interface ClockInterface {
+    tick();
+}
+
+
+function createClock(clockConstructor: ClockConstructor, h:number, m:number):ClockInterface {
+    return new clockConstructor(h, m)
+}
+
+class DigitalClock implements ClockInterface {
+
+    constructor(h:number, m:number) {}
+
+    public tick():void {
+        console.log('beep beep')
+    }
+}
+
+let clock:ClockInterface = createClock(DigitalClock, 0, 1)
+clock.tick();
+
+//Extending interfaces
+
+type RGB = {
+    r:number,
+    g:number,
+    b:number
+}
+
+interface Shape {
+    color: RGB
+}
+
+interface Square extends Shape {
+    size: number
+}
+
+let square = <Square>{}
+square.color = {r:100, b:200, g:0}
+square.size = 20;
+
+console.log(square)
