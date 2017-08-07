@@ -1,27 +1,27 @@
 
-interface Operation {
+export interface Operation {
     invoke(p:Pair):number
 }
 
-type Pair = {
+export type Pair = {
     a:number, b:number
 }
 
-class Sum implements Operation {
+export class Sum implements Operation {
 
     public invoke(p:Pair):number {
         return p.a + p.b
     }
 }
 
-class Substract implements Operation {
+export class Substract implements Operation {
 
     public invoke(p:Pair):number {
         return p.a - p.b
     }
 }
 
-class Calc {
+export class Calc {
     static calculate(p:Pair, op:Operation):number {
         return op.invoke(p)
     }

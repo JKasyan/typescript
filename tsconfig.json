@@ -6,6 +6,8 @@
     "files": [
         "src/main.ts",
         "src/basic_types.ts",
-        "src/*.ts"
+        "src/classes.ts",
+        "src/functions.ts",
+        "src/patterns/*.ts"
     ]
 }
