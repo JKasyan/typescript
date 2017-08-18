@@ -8,6 +8,8 @@
         "src/basic_types.ts",
         "src/classes.ts",
         "src/functions.ts",
-        "src/patterns/*.ts"
+        "src/generics.ts",
+        "src/enums.ts",
+        "src/types_inferences.ts"
     ]
 }
